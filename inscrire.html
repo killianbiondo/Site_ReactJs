@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="site de photographe"/>
+  <title>Inscription - Vente d'articles de football</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+      <nav class="navbar bg-body-tertiary">
+          <form class="container-fluid justify-content-start">
+            <button onclick="window.location.href ='index.html'" class="btn btn-outline-success me-2" type="button">Accueil</button>
+            <button  onclick="window.location.href ='produit.html'" class="btn btn-outline-success me-2" type="button">Produits</button>
+            <button  onclick="window.location.href ='painer.html'" class="btn btn-sm btn-outline-secondary" type="button">Mon panier</button>
+            <button  onclick="window.location.href ='login.html'"  class="btn btn-sm btn-outline-secondary" type="button">Se connecter</button>
+          </form>
+        </nav>
+  </header>
+  
+  <main>
+    <h2>Inscription</h2>
+    <form id="signup-form" onsubmit="registerUser(event)">
+        <label for="name">Nom:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="address">Adresse:</label><br>
+        <textarea id="address" name="address" required></textarea><br>
+        <label for="card">Coordonnées bancaires:</label><br>
+        <input type="text" id="card" name="card" required><br><br>
+        <button type="submit">S'inscrire</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2024 Magasin de football</p>
+</footer>
+
+<script>
+    function registerUser(event) {
+        event.preventDefault(); // Empêcher le formulaire de soumettre normalement
+
+        // Récupérer les valeurs du formulaire
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let address = document.getElementById('address').value;
+        let card = document.getElementById('card').value;
+
+        // Ajouter la logique pour enregistrer l'utilisateur (par exemple, envoyer les données à un serveur)
+        // Ici, nous imprimons simplement les données dans la console pour la démonstration
+        console.log("Nom: " + name);
+        console.log("Email: " + email);
+        console.log("Mot de passe: " + password);
+        console.log("Adresse: " + address);
+        console.log("Coordonnées bancaires: " + card);
+
+        // Rediriger l'utilisateur vers la page d'accueil après l'inscription
+        window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>

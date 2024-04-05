@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="site de photographe"/>
+  <title>Produits - Vente d'articles de football</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <form class="container-fluid justify-content-start">
+              <button onclick="window.location.href ='index.html'" class="btn btn-outline-success me-2" type="button">Accueil</button>
+              <button class="btn btn-outline-success me-2" type="button">Produits</button>
+              <button onclick="window.location.href ='panier.html'" class="btn btn-sm btn-outline-secondary" type="button">Mon panier</button>
+              <button onclick="window.location.href ='login.html'" class="btn btn-sm btn-outline-secondary" type="button">Se connecter</button>
+            </form>
+          </nav>
+    </header>
+
+    <main>
+        <h2>Nos produits</h2>
+        <div class="card mb-3">
+            <h3>Ballon de football</h3>
+            <p>Prix: 25€</p>
+            <img src="images/football.jpg"  class="rounded mx-auto d-block" alt="Ballon de football">
+            
+            <button onclick="addToCart('Chaussures de football', 50)" type="button" class="btn btn-outline-info">Ajouter au panier</button>
+        </div>
+        
+        <div class="card mb-3">
+            <h3>Chaussures de football</h3>
+            <p>Prix: 120€</p>
+            <img src="images/chaussures.jpg"  class="rounded mx-auto d-block"  alt="Chaussures de football">
+            <button onclick="addToCart('Chaussures de football', 50)" type="button" class="btn btn-outline-info">Ajouter au panier</button>
+        </div>
+       
+        <div class="card mb-3">
+            <h3>Maillot de l'ASSE 90 ans</h3>
+            <p>Prix: 95€</p>
+            <img src="images/maillot.jpg"  class="rounded mx-auto d-block"  alt="Maillot de football">
+            <button onclick="addToCart('Chaussures de football', 50)" type="button" class="btn btn-outline-info">Ajouter au panier</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Magasin de football</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            // Logique pour ajouter un produit au panier
+            alert("Le produit " + productName + " a été ajouté au panier!");
+        }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
